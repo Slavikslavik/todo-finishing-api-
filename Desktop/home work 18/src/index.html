@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hillel home work</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: skyblue;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 48px auto 0;
+        }
+
+        .note__item:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        .note__item--completed {
+            text-decoration: line-through;
+            color: grey;
+        }
+        .hidden {
+            display: none;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+            width: 250px;
+        }
+        .check {
+            text-decoration: line-through;
+        }
+        button:disabled {
+            opacity: 50%;
+        }
+        
+    </style>
+    <div class="box">
+        <form class="login">
+            <input type="text" placeholder="id" class="form_input">
+            <button type="submit">submit</button>
+        </form>
+        <form class="note">
+            <p>Add task</p>
+            <input type="text" placeholder="task" class="form_task">
+            <button>add</button>
+        </form>
+        <ul class="note_list"></ul>
+    </div>
+    <form class="edit" ></form>    
+    <script src="index.js"></script>
+</body>
+</html>
